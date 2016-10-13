@@ -1,10 +1,10 @@
 package es.upm.miw.pd.composite.expression.solution;
 
-public class Number extends Expression {
+public class Numero extends Expression {
 
 	private int value;
 
-	public Number(int value) {
+	public Numero(int value) {
 		this.value = value;
 	}
 
