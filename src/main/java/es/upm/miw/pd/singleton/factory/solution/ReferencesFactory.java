@@ -6,14 +6,13 @@ import java.util.Map;
 public class ReferencesFactory {
 	private Map<String, Integer> references;
 
-	private static ReferencesFactory referencesFactory;
+	private static ReferencesFactory referencesFactory = new ReferencesFactory();
 
 	private int reference;
 
 	private ReferencesFactory() {
 		this.references = new HashMap<>();
 		this.reference = 0;
-		referencesFactory = null;
 	}
 
 	public int getReference(String key) {
@@ -31,9 +30,6 @@ public class ReferencesFactory {
 	}
 
 	public static ReferencesFactory getReferencesFactory() {
-		if (ReferencesFactory.referencesFactory == null) {
-			ReferencesFactory.referencesFactory = new ReferencesFactory();
-		}
 		return ReferencesFactory.referencesFactory;
 	}
 
