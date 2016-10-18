@@ -1,7 +1,13 @@
 package es.upm.miw.pd.state.connection.solution;
 
 public class Esperando extends Estado {
+	
+	private Estados estado;
 
+	public Esperando(){
+		this.setEstado(Estados.ESPERANDO);	
+	}
+	
 	@Override
 	public void abrir(Conexion conexion) {
 		throw new UnsupportedOperationException("Acción no permitida... ");	
@@ -40,6 +46,14 @@ public class Esperando extends Estado {
 	@Override
 	public String toString() {
 		return "Esperando";
+	}
+
+	public Estados getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estados estado) {
+		this.estado = estado;
 	}
 
 }

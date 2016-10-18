@@ -1,6 +1,12 @@
 package es.upm.miw.pd.state.connection.solution;
 
 public class Parado extends Estado{
+	
+	private Estados estado;
+
+	public Parado(){
+		this.setEstado(Estados.PARADO);	
+	}
 
 	@Override
 	public void abrir(Conexion conexion) {
@@ -38,6 +44,14 @@ public class Parado extends Estado{
 	@Override
 	public String toString() {
 		return "Parado";
+	}
+
+	public Estados getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estados estado) {
+		this.estado = estado;
 	}
 
 }

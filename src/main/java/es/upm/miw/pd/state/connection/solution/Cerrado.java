@@ -1,7 +1,13 @@
 package es.upm.miw.pd.state.connection.solution;
 
 public class Cerrado extends Estado{
+	
+	private Estados estado;
 
+	public Cerrado(){
+		this.setEstado(Estados.PARADO);	
+	}
+	
 	@Override
 	public void abrir(Conexion conexion) {
 		conexion.setEstado(new Preparado());
@@ -36,6 +42,14 @@ public class Cerrado extends Estado{
 	@Override
 	public String toString() {
 		return "Cerrado";
+	}
+
+	public Estados getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estados estado) {
+		this.estado = estado;
 	}
 
 }

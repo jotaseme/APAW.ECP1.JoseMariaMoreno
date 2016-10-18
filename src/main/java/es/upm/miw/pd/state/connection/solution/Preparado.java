@@ -1,7 +1,13 @@
 package es.upm.miw.pd.state.connection.solution;
 
 public class Preparado extends Estado {
+	
+	private Estados estado;
 
+	public Preparado(){
+		this.setEstado(Estados.PREPARADO);	
+	}
+	
 	@Override
 	public void abrir(Conexion conexion) {		
 	}
@@ -34,6 +40,14 @@ public class Preparado extends Estado {
 	@Override
 	public String toString() {
 		return "Preparado";
+	}
+
+	public Estados getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estados estado) {
+		this.estado = estado;
 	}
 
 }
