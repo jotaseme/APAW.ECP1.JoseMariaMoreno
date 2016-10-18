@@ -13,7 +13,7 @@ public class Resta extends CompositeExpression {
 
 	@Override
 	public String toString() {
-		return getExpression1().toString() + " - " + getExpression2().toString();
+		return "("+getExpression1().toString() + "-" + getExpression2().toString()+")";
 	}
 
 }
