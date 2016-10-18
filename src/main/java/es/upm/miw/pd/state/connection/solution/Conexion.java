@@ -10,7 +10,7 @@ public class Conexion {
 	public Conexion(LinkMock link) {
 		assert link != null;
 		this.link = link;
-		this.setEstado(new Parado());
+		this.setEstado(new Cerrado());
 	}
 
 	protected void setEstado(Estado estado) {
