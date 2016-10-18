@@ -8,7 +8,7 @@ public class Division extends CompositeExpression {
 
 	@Override
 	public int operar() {
-		return getExpression1().operar() * getExpression2().operar();
+		return getExpression1().operar()/getExpression2().operar();
 	}
 
 	@Override
