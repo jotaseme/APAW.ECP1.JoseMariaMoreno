@@ -15,7 +15,7 @@ public abstract class CompositeExpression extends Expression {
         return this.exp1;
     }
     
-    public Expression getExpresion2(){
+    public Expression getExpression2(){
         return this.exp2;
     }
     
