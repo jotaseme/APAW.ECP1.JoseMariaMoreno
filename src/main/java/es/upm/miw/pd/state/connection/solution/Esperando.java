@@ -45,7 +45,7 @@ public class Esperando extends Estado {
 
 	@Override
 	public String toString() {
-		return "Esperando";
+		return "ESPERANDO";
 	}
 
 	public Estados getEstado() {

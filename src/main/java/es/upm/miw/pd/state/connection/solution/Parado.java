@@ -43,7 +43,7 @@ public class Parado extends Estado{
 
 	@Override
 	public String toString() {
-		return "Parado";
+		return "PARADO";
 	}
 
 	public Estados getEstado() {

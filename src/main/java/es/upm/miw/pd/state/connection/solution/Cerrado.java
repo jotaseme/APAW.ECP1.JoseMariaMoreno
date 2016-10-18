@@ -41,7 +41,7 @@ public class Cerrado extends Estado{
 
 	@Override
 	public String toString() {
-		return "Cerrado";
+		return "CERRADO";
 	}
 
 	public Estados getEstado() {

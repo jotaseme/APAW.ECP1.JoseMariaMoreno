@@ -39,7 +39,7 @@ public class Preparado extends Estado {
 
 	@Override
 	public String toString() {
-		return "Preparado";
+		return "PREPARADO";
 	}
 
 	public Estados getEstado() {
