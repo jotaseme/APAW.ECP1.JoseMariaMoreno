@@ -12,7 +12,7 @@ public class Numero extends Expression {
 	public int operar() {
 		return value;
 	}
-	
+
 	@Override
 	public String toString() {
 		return String.valueOf(value);
