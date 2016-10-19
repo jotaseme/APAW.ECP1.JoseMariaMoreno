@@ -1,7 +1,11 @@
 package es.upm.miw.pd.visitor.figure.solution;
 
 public class Cuadrado implements Figura {
-
+	private double side;
+	
+	public Cuadrado(double side){
+		this.side = side;
+	}
 	@Override
 	public void accept(Visitor v) {
 		v.visitCuadrado(this);
@@ -10,5 +14,9 @@ public class Cuadrado implements Figura {
 	public double numberOfSides() {
         return 4;
     }
+	
+	public double getSide(){
+		return this.side;
+	}
 
 }

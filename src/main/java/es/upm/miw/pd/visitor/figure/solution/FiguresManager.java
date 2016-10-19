@@ -5,19 +5,19 @@ import java.util.List;
 
 public class FiguresManager {
 
-    private List<Figura> figures;
+    private List<Figura> figuras;
 
     public FiguresManager() {
-        figures = new ArrayList<>();
+        figuras = new ArrayList<>();
     }
 
     public void add(Figura figure) {
-        figures.add(figure);
+        figuras.add(figure);
     }
 
     public double totalArea() {   	
     	Visitor v = new VisitorArea();
-    	for (Figura figure : figures) {
+    	for (Figura figure : figuras) {
             figure.accept(v);
         }
     	return 0;
@@ -25,8 +25,8 @@ public class FiguresManager {
     }
 
     public double totalNumberOfSides() {
-    	Visitor v = new VisitorArea();
-        for (Figura figure : figures) {
+    	Visitor v = new VisitorSize();
+        for (Figura figure : figuras) {
             figure.accept(v);
         }
         return 0;

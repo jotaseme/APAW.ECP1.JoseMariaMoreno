@@ -3,21 +3,19 @@ package es.upm.miw.pd.visitor.figure.solution;
 public class VisitorArea extends Visitor {
 
 	@Override
-	public void visitCuadrado(Cuadrado cuadrado) {
-		// TODO Auto-generated method stub
+	public double visitCuadrado(Cuadrado cuadrado) {
+		return (cuadrado.getSide() * cuadrado.getSide());
+	}
+
+	@Override
+	public double visitTriangulo(Triangulo triangulo) {
+		return (triangulo.getBase() * triangulo.getHeight() * 0.5);
 
 	}
 
 	@Override
-	public void visitTriangulo(Triangulo triangulo) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void visitCirculo(Circulo circulo) {
-		//Math.PI * circulo.getRadius() * circulo.getRadius();
-
+	public double visitCirculo(Circulo circulo) {
+		return (Math.PI * circulo.getRadius() * circulo.getRadius());
 	}
 
 }

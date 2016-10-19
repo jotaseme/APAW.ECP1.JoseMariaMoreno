@@ -3,6 +3,10 @@ package es.upm.miw.pd.visitor.figure.solution;
 public class Circulo implements Figura {
 	private double radius;
 	
+	public Circulo (double radius){
+		this.radius = radius;
+	}
+	
 	@Override
 	public void accept(Visitor v) {
 		v.visitCirculo(this);
@@ -17,5 +21,4 @@ public class Circulo implements Figura {
 	public double numberOfSides() {
 		return Double.POSITIVE_INFINITY;
 	}
-
 }

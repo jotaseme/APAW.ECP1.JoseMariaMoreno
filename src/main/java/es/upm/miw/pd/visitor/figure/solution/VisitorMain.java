@@ -1,21 +1,26 @@
 package es.upm.miw.pd.visitor.figure.solution;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 import upm.jbb.IO;
 
 public final class VisitorMain {
-	private Collection<Figura> coleccion = new ArrayList<Figura>();
+	
+	private FiguresManager figuresManager = new FiguresManager();
 
 	public VisitorMain() {
-		coleccion.add(new Triangulo());
-		coleccion.add(new Cuadrado());
-		coleccion.add(new Circulo());
+		figuresManager.add(new Triangulo(1,2));
+		figuresManager.add(new Cuadrado(2));
+		figuresManager.add(new Cuadrado(2));
+		figuresManager.add(new Triangulo(1,2));
+	
 	}
 
 	public void visitador() {
+		figuresManager.totalArea();
+		figuresManager.totalNumberOfSides();
 		
+		//IO.getIO().println(visitorSize.getNumberOfSidesCounter());
+		//IO.getIO().println(visitorSize.getNumberOfSidesCounter());
+	
 	}
 
 	public static void main(String[] args) {
