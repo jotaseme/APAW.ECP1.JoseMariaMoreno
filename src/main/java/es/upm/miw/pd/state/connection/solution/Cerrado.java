@@ -1,11 +1,13 @@
 package es.upm.miw.pd.state.connection.solution;
 
-public class Cerrado extends Estado{
+import es.upm.miw.pd.state.connection.solution.Estado;
+
+public class Cerrado extends State{
 	
-	private Estados estado;
+	private Estado estado;
 
 	public Cerrado(){
-		this.setEstado(Estados.PARADO);	
+		this.estado = Estado.CERRADO;
 	}
 	
 	@Override
@@ -44,12 +46,8 @@ public class Cerrado extends Estado{
 		return "CERRADO";
 	}
 
-	public Estados getEstado() {
+	@Override
+	public Estado getEstado(){
 		return estado;
 	}
-
-	public void setEstado(Estados estado) {
-		this.estado = estado;
-	}
-
 }

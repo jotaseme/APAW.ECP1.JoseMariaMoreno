@@ -1,24 +1,27 @@
 package es.upm.miw.pd.state.connection.solution;
 
 import es.upm.miw.pd.state.conection.solution.LinkMock;
-import es.upm.miw.pd.state.connection.solution.Estado;
 
 public class Conexion {
-	private Estado estado;
+	private State state;
 	private LinkMock link;
 
 	public Conexion(LinkMock link) {
 		assert link != null;
 		this.link = link;
-		this.setEstado(new Cerrado());
+		this.setState(new Cerrado());		
 	}
 
-	protected void setEstado(Estado estado) {
-		this.estado = estado;
+	protected void setState(State state) {
+		this.state = state;
+	}
+	
+	protected void setEstado(State state) {
+		this.state = state;
 	}
 	
 	public Estado getEstado() {
-        return this.estado;
+        return state.getEstado();
     }
 	
 	public LinkMock getLink() {
@@ -26,27 +29,27 @@ public class Conexion {
 	}
 	
 	public void abrir(){
-		estado.abrir(this);
+		state.abrir(this);
 	}
     
     public void cerrar(){
-    	estado.cerrar(this);
+    	state.cerrar(this);
     }
     
     public void enviar(String msg){
-    	estado.enviar(msg, this);
+    	state.enviar(msg, this);
     }
     
     public void recibir(int respuesta){
-    	estado.recibir(respuesta, this);
+    	state.recibir(respuesta, this);
     }
     
     public void iniciar(){
-    	estado.iniciar(this);
+    	state.iniciar(this);
     }
     
     public void parar(){
-    	estado.parar(this);
+    	state.parar(this);
     }
     
     public String toString(){

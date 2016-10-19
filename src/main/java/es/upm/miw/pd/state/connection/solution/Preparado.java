@@ -1,11 +1,10 @@
 package es.upm.miw.pd.state.connection.solution;
 
-public class Preparado extends Estado {
+public class Preparado extends State {
+	private Estado estado;
 	
-	private Estados estado;
-
 	public Preparado(){
-		this.setEstado(Estados.PREPARADO);	
+		estado = Estado.PREPARADO;
 	}
 	
 	@Override
@@ -42,12 +41,8 @@ public class Preparado extends Estado {
 		return "PREPARADO";
 	}
 
-	public Estados getEstado() {
+	@Override
+	public Estado getEstado() {
 		return estado;
 	}
-
-	public void setEstado(Estados estado) {
-		this.estado = estado;
-	}
-
 }

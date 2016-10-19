@@ -1,11 +1,11 @@
 package es.upm.miw.pd.state.connection.solution;
 
-public class Esperando extends Estado {
+public class Esperando extends State {
 	
-	private Estados estado;
+	private Estado estado;
 
 	public Esperando(){
-		this.setEstado(Estados.ESPERANDO);	
+		this.estado = Estado.ESPERANDO;
 	}
 	
 	@Override
@@ -26,7 +26,7 @@ public class Esperando extends Estado {
 	@Override
 	public void recibir(int respuesta, Conexion conexion) {
 		if(respuesta == 0){
-			conexion.setEstado(new Parado());
+			conexion.setEstado(new Preparado());
 		}else if(respuesta > 0){
 			conexion.setEstado(new Cerrado());
 		}
@@ -48,12 +48,10 @@ public class Esperando extends Estado {
 		return "ESPERANDO";
 	}
 
-	public Estados getEstado() {
+	@Override
+	public Estado getEstado() {
 		return estado;
-	}
-
-	public void setEstado(Estados estado) {
-		this.estado = estado;
+		
 	}
 
 }
