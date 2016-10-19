@@ -4,8 +4,12 @@ public class Triangulo implements Figura {
 
 	@Override
 	public void accept(Visitor v) {
-		// TODO Auto-generated method stub
+		v.visitTriangulo(this);
+	}
 
+	@Override
+	public double numberOfSides() {
+		return 3;
 	}
 
 }

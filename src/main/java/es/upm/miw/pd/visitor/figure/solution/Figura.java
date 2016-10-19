@@ -4,4 +4,6 @@ import es.upm.miw.pd.visitor.figure.solution.Visitor;
 
 public interface Figura {
 	void accept(Visitor v);
+	double numberOfSides();
+
 }

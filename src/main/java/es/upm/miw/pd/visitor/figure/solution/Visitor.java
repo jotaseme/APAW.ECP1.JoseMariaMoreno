@@ -5,4 +5,5 @@ public abstract class Visitor {
 	public abstract void visitTriangulo(Triangulo triangulo);
 	public abstract void visitCirculo(Circulo circulo);
 
+
 }

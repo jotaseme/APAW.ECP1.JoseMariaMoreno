@@ -5,12 +5,17 @@ public class Circulo implements Figura {
 	
 	@Override
 	public void accept(Visitor v) {
-		// TODO Auto-generated method stub
+		v.visitCirculo(this);
 
 	}
 	
 	public double getRadius(){
 		return this.radius;
+	}
+
+	@Override
+	public double numberOfSides() {
+		return Double.POSITIVE_INFINITY;
 	}
 
 }

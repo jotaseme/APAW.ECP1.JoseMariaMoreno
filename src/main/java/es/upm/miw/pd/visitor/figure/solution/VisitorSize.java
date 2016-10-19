@@ -4,13 +4,13 @@ public class VisitorSize extends Visitor {
 
 	@Override
 	public void visitCuadrado(Cuadrado cuadrado) {
-		// TODO Auto-generated method stub
+		//contNumLados(cuadrado.numberOfSides());
 
 	}
 
 	@Override
 	public void visitTriangulo(Triangulo triangulo) {
-		// TODO Auto-generated method stub
+		//contNumLados(triangulo.numberOfSides());
 
 	}
 

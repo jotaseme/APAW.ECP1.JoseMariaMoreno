@@ -4,8 +4,11 @@ public class Cuadrado implements Figura {
 
 	@Override
 	public void accept(Visitor v) {
-		// TODO Auto-generated method stub
-
+		v.visitCuadrado(this);
 	}
+	
+	public double numberOfSides() {
+        return 4;
+    }
 
 }
