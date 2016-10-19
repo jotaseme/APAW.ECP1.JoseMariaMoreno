@@ -3,7 +3,7 @@ package es.upm.miw.pd.factoryMethod.naturalNumber.solution;
 public abstract class NaturalNumber {
     private int value;
 
-    private static final String[] textValue = null;
+    private static String[] textValue = null;
 
     public NaturalNumber(int value) {
         this.setValue(value);
@@ -20,6 +20,10 @@ public abstract class NaturalNumber {
 
     public void add(int value) {
         this.setValue(this.value + value);
+    }
+    
+    public void setTextValue(String[] textValue){
+    	NaturalNumber.textValue = textValue; 
     }
 
     public String getTextValue() {
