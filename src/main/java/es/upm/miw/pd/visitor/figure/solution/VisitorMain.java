@@ -15,12 +15,9 @@ public final class VisitorMain {
 	}
 
 	public void visitador() {
-		figuresManager.totalArea();
-		figuresManager.totalNumberOfSides();
+		IO.getIO().println("Numero de lados: " + figuresManager.totalNumberOfSides());
+		IO.getIO().println("Area total: " + figuresManager.totalArea());
 		
-		//IO.getIO().println(visitorSize.getNumberOfSidesCounter());
-		//IO.getIO().println(visitorSize.getNumberOfSidesCounter());
-	
 	}
 
 	public static void main(String[] args) {

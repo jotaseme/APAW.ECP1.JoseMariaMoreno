@@ -20,8 +20,7 @@ public class FiguresManager {
     	for (Figura figure : figuras) {
             figure.accept(v);
         }
-    	return 0;
-      
+    	return v.getTotalArea();      
     }
 
     public double totalNumberOfSides() {
@@ -29,7 +28,7 @@ public class FiguresManager {
         for (Figura figure : figuras) {
             figure.accept(v);
         }
-        return 0;
+        return v.getTotalSides();
     }
 
 }

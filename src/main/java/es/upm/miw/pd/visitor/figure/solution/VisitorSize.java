@@ -2,20 +2,41 @@ package es.upm.miw.pd.visitor.figure.solution;
 
 public class VisitorSize extends Visitor {
 	
-
-	@Override
-	public double visitCuadrado(Cuadrado cuadrado) {
-		return (cuadrado.numberOfSides());
+	private double totalSides;
+	
+	public VisitorSize(){
+		totalSides = 0;
+	}
+	
+	public double getTotalSides(){
+		return totalSides;
+	}
+	
+	public void addTotalSides(double partialSides){
+		totalSides += partialSides;
 	}
 
 	@Override
-	public double visitTriangulo(Triangulo triangulo) {
-		return (triangulo.numberOfSides());
+	public void visitCuadrado(Cuadrado cuadrado) {
+		addTotalSides(cuadrado.numberOfSides());
 	}
 
 	@Override
-	public double visitCirculo(Circulo circulo) {
-		return (circulo.numberOfSides());
+	public void visitTriangulo(Triangulo triangulo) {
+		addTotalSides(triangulo.numberOfSides());
 	}
+
+	@Override
+	public void visitCirculo(Circulo circulo) {
+		addTotalSides (circulo.numberOfSides());
+	}
+
+	@Override
+	public double getTotalArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
 
 }
