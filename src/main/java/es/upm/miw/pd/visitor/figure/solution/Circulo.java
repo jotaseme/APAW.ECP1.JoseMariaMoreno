@@ -10,7 +10,6 @@ public class Circulo implements Figura {
 	@Override
 	public void accept(Visitor v) {
 		v.visitCirculo(this);
-
 	}
 	
 	public double getRadius(){
