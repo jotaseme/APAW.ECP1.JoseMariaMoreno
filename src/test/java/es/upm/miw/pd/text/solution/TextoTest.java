@@ -7,33 +7,33 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 
-import es.upm.miw.pd.text.solution.Componente;
+import es.upm.miw.pd.text.solution.Texto;
 import es.upm.miw.pd.text.solution.FactoriaCaracter;
 import es.upm.miw.pd.text.solution.Parrafo;
-import es.upm.miw.pd.text.solution.Texto;
+
 
 public class TextoTest {
-    private Componente H, o, l, a, pf, txt;
+    private Texto H, o, l, a, pf, txt;
 
     @Before
     public void ini() {
-        H = FactoriaCaracter.getFactoria().get('H');
-        o = FactoriaCaracter.getFactoria().get('o');
-        l = FactoriaCaracter.getFactoria().get('l');
-        a = FactoriaCaracter.getFactoria().get('a');
+        H = FactoriaCaracter.getFactoriaCaracter().get('H');
+        o = FactoriaCaracter.getFactoriaCaracter().get('o');
+        l = FactoriaCaracter.getFactoriaCaracter().get('l');
+        a = FactoriaCaracter.getFactoriaCaracter().get('a');
         pf = new Parrafo();
         pf.add(H);
         pf.add(o);
         pf.add(l);
         pf.add(a);
-        txt = new Texto();
+        txt = new TextoCompuesto();
         txt.add(pf);
         txt.add(pf);
     }
 
     @Test
     public void testCaracterFlyweight() {
-        assertSame(H, FactoriaCaracter.getFactoria().get('H'));
+        assertSame(H, FactoriaCaracter.getFactoriaCaracter().get('H'));
     }
 
     @Test
