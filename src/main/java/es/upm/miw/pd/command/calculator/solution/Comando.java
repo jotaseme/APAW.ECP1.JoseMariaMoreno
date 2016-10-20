@@ -1,8 +1,10 @@
 package es.upm.miw.pd.command.calculator.solution;
 
-public interface Order {
 
+public interface Comando {
+   
 	void execute();
 	String name();
+	
 
 }

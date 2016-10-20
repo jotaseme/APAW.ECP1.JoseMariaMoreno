@@ -1,10 +1,10 @@
 package es.upm.miw.pd.command.calculator.solution;
 
-public class Operar implements Order {
+public class Operar implements Comando {
 	
 	Calculator calculator;
 	
-	public Operar(){
+	public Operar(Calculator calculator){
 		this.calculator = new Calculator();
 	}
 
