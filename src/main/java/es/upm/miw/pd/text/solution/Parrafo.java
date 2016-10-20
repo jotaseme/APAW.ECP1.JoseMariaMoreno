@@ -9,30 +9,36 @@ public class Parrafo extends TextoContenedor {
 	public Parrafo(){
 		this.texto = new ArrayList<Texto>();
 	}
+	
+	@Override
+	public void delete(Texto componente) {
+		if(componente.isCaracter()){
+			texto.remove(componente);
+		}else{
+			//Si se intenta borrar, debe ignorarse
+		}
+	}
 
 	@Override
 	public void add(Texto componente) {
-		// TODO Auto-generated method stub
-
-	}
-	
-	@Override
-	public void delete(Texto texto) {
-		// TODO Auto-generated method stub
-		
+		if(componente.isCaracter()){
+			texto.add(componente);
+		}else{
+			throw new UnsupportedOperationException();
+		}
 	}
 
 	@Override
 	public String dibujar(boolean mayusculas) {
-		// TODO Auto-generated method stub
-		return null;
+		String parrafo = "";
+		for(Texto caracter : texto){
+			parrafo += caracter.dibujar(mayusculas);
+		}
+		return parrafo + "\n";
 	}
 
 	@Override
 	public boolean isCaracter() {
 		return false;
 	}
-
-	
-
 }
