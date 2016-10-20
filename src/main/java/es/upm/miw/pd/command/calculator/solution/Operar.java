@@ -2,7 +2,7 @@ package es.upm.miw.pd.command.calculator.solution;
 
 public class Operar implements Comando {
 	
-	Calculator calculator;
+	private Calculator calculator;
 	
 	public Operar(Calculator calculator){
 		this.calculator = calculator;
