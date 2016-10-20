@@ -33,7 +33,7 @@ public class TextoCompuesto extends TextoContenedor {
 		for(Texto caracter : texto){
 			parrafo += caracter.dibujar(mayusculas);
 		}
-		return parrafo + "\n---o---";
+		return parrafo + "---o---\n";
 	}
 
 	@Override
