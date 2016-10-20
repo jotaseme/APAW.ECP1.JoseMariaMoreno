@@ -10,21 +10,30 @@ public class TextoCompuesto extends TextoContenedor {
 	}
 	
 	@Override
-	public void delete(Texto texto) {
-		// TODO Auto-generated method stub
-
+	public void delete(Texto componente) {
+		if(componente.isCaracter()){
+			texto.remove(componente);
+		}else{
+			//Si se intenta borrar, debe ignorarse
+		}
 	}
 
 	@Override
 	public void add(Texto componente) {
-		// TODO Auto-generated method stub
-
+		if(componente.isCaracter()){
+			texto.add(componente);
+		}else{
+			throw new UnsupportedOperationException();
+		}
 	}
 
 	@Override
 	public String dibujar(boolean mayusculas) {
-		// TODO Auto-generated method stub
-		return null;
+		String parrafo = "";
+		for(Texto caracter : texto){
+			parrafo += caracter.dibujar(mayusculas);
+		}
+		return parrafo + "\n";
 	}
 
 	@Override
