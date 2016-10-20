@@ -10,7 +10,7 @@ public class PrintCommand extends Operar {
 
 	@Override
 	public void execute() {
-		IO.getIO().println("Resultado: " + this.calculator.getTotal());	
+		IO.getIO().println("Resultado: " + this.getCalculator().getTotal());	
 	}
 
 	@Override

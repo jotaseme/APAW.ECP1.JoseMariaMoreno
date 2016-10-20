@@ -5,7 +5,7 @@ public class Operar implements Comando {
 	Calculator calculator;
 	
 	public Operar(Calculator calculator){
-		this.calculator = new Calculator();
+		this.calculator = calculator;
 	}
 
 	@Override
@@ -18,6 +18,10 @@ public class Operar implements Comando {
 	public String name() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public Calculator getCalculator(){
+		return this.calculator;
 	}
 
 }

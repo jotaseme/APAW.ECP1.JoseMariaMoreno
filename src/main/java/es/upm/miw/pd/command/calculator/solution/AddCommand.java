@@ -11,7 +11,7 @@ public class AddCommand extends Operar {
 	@Override
 	public void execute() {
 		int valor = IO.getIO().readInt();
-		this.calculator.add(valor);
+		this.getCalculator().add(valor);
 	}
 
 	@Override

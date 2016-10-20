@@ -8,7 +8,7 @@ public class ResetCommand extends Operar {
 
 	@Override
 	public void execute() {
-		this.calculator.reset();
+		this.getCalculator().reset();
 	}
 
 	@Override

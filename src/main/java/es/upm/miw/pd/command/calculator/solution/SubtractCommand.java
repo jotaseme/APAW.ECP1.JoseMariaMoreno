@@ -11,7 +11,7 @@ public class SubtractCommand extends Operar {
 	@Override
 	public void execute() {
 		int valor = IO.getIO().readInt();
-		this.calculator.subtract(valor);
+		this.getCalculator().subtract(valor);
 	}
 
 	@Override
