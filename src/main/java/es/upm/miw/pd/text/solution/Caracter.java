@@ -4,6 +4,10 @@ class Caracter extends Texto {
 	
 	private char caracter;
 	
+	public Caracter(char caracter) {
+		 this.caracter = caracter;
+	}
+
 	@Override
 	public void add(Texto componente) {
 		//Si se intenta añadir, se debe ignorar
