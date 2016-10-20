@@ -11,7 +11,7 @@ public class TextoCompuesto extends TextoContenedor {
 	
 	@Override
 	public void delete(Texto componente) {
-		if(componente.isCaracter()){
+		if(!componente.isCaracter()){
 			texto.remove(componente);
 		}else{
 			//Si se intenta borrar, debe ignorarse
@@ -20,7 +20,7 @@ public class TextoCompuesto extends TextoContenedor {
 
 	@Override
 	public void add(Texto componente) {
-		if(componente.isCaracter()){
+		if(!componente.isCaracter()){
 			texto.add(componente);
 		}else{
 			throw new UnsupportedOperationException();
@@ -33,7 +33,7 @@ public class TextoCompuesto extends TextoContenedor {
 		for(Texto caracter : texto){
 			parrafo += caracter.dibujar(mayusculas);
 		}
-		return parrafo + "\n";
+		return parrafo + "\n---o---";
 	}
 
 	@Override
